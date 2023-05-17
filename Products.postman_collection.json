@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "1eb7c960-29a1-4f2f-93b7-d30356e0a8e1",
+		"name": "Products",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24101039"
+	},
+	"item": [
+		{
+			"name": "ADD PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "name1",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "10000",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "shipping",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "productImages",
+							"type": "file",
+							"src": [
+								"/C:/Users/faiz1/Downloads/iphone2.jpg",
+								"/C:/Users/faiz1/Downloads/iphone1.jpg"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/addproduct",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"addproduct"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EDIT PRODUCT",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "name1",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "1000",
+							"type": "text"
+						},
+						{
+							"key": "discount",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "shipping",
+							"value": "100",
+							"type": "text"
+						},
+						{
+							"key": "productImages",
+							"type": "file",
+							"src": [
+								"/C:/Users/faiz1/Downloads/iphone2.jpg",
+								"/C:/Users/faiz1/Downloads/iphone1.jpg"
+							]
+						},
+						{
+							"key": "productid",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":\"16\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

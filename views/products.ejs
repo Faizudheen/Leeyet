@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-700">
+
+
+    <div class="min-h-full">
+        <nav class="bg-gray-800">
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                <div class="flex h-16 items-center justify-between">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                            <img class="h-8 w-8 rounded-lg" src="./imgs/propic.jpg"
+                                alt="Logo">
+                        </div>
+                        <div class="hidden md:block">
+                            <div class="ml-10 flex items-baseline space-x-4">
+                                <a href="/" class=" text-white hover:bg-gray-700 rounded-md px-3 py-2 text-sm font-medium"
+                                    aria-current="page">Dashboard</a>
+                                <a href="#"
+                                    class="bg-gray-900 text-gray-300  hover:text-white rounded-md px-3 py-2 text-sm font-medium">Products</a>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="container mx-auto p-8">
+        <h1 class="text-2xl font-bold mb-4 text-white">Add Product</h1>
+        
+        <form action="/addProduct" method="POST" enctype="multipart/form-data">
+          <div class="mb-4">
+            <label class="block text-gray-300 font-bold mb-2" for="name">Name</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" placeholder="Product Name" required>
+          </div>
+          
+          <div class="mb-4">
+            <label class="block text-gray-300 font-bold mb-2" for="price">Price (excluding tax)</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="price" name="price" type="number" step="0.01" placeholder="Price" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-300 font-bold mb-2" for="discount">Discount (in amount)</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="discount" name="discount" type="number" step="0.01" placeholder="Discount" required>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-gray-300 font-bold mb-2" for="shipping">Shipping Charge</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="shipping" name="shipping" type="number" step="0.01" placeholder="Shipping Charge" required>
+          </div>
+          
+          <div class="mb-4">
+            <label class="block text-gray-300 font-bold mb-2" for="images">Images</label>
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="images" name="productImages" type="file" multiple required>
+          </div>
+          
+          <div class="mb-4">
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Add Product
+            </button>
+          </div>
+        </form>
+      </div>
+
+</body>
+
+</html>
